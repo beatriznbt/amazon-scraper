@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Scrapper</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Amazon Scraper</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Enter search keyword">
-        <button onclick="fetchData()">Search</button>
-    </div>
-    <div id="results"></div>
+    <header>
+        <div id="navbar">
+            <a href="#home"><img src="logo.png" alt="Logo" class="logo"></a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for products...">
+                <button type="submit" id="searchButton">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="results"></section>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>

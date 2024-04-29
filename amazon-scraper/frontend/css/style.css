@@ -1,19 +1,82 @@
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
     font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
-.search-container {
-    text-align: center;
-    margin-top: 20px;
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
 }
 
-#searchInput {
-    width: 300px;
-    height: 20px;
-    padding: 10px;
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-right: 2px;
 }
 
 button {
-    height: 42px;
-    padding: 0 20px;
+    padding: 8px 16px;
+    background-color: #febd69;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+}
+
+.product {
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.product img {
+    display: block;      /* Garante que a imagem é tratada como um bloco para aplicar margens e centralização */
+    margin: 0 auto;      /* Define as margens laterais como automáticas para centralizar a imagem */
+    max-width: 100px;    /* Limite máximo da largura da imagem */
+    height: auto;        /* Altura ajustada automaticamente para manter a proporção da imagem */
+}
+
+.star-rating {
+    color: gold; /* Define a cor das estrelas como dourado */
+    font-size: 16px; /* Define o tamanho da fonte das estrelas */
+}
+
+#results .rating {
+    font-size: 10px;  /* Define um tamanho menor para a fonte do rating */
+}
+
+#results h2 {
+    font-size: 15px; /* Define o tamanho da fonte para 14px, ajuste conforme necessário */
+    font-weight: bold; /* Opção para não enfatizar demais o título */
+
 }
