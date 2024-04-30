@@ -48,35 +48,35 @@ main {
 #results {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     gap: 10px;
 }
 
 .product {
     width: 220px;
-    border: 1px solid #ccc;
+    border: none;
     padding: 10px;
     margin: 10px;
 }
 
 .product img {
-    display: block;      /* Garante que a imagem é tratada como um bloco para aplicar margens e centralização */
-    margin: 0 auto;      /* Define as margens laterais como automáticas para centralizar a imagem */
-    max-width: 100px;    /* Limite máximo da largura da imagem */
-    height: auto;        /* Altura ajustada automaticamente para manter a proporção da imagem */
+    display: block;   
+    margin: 0 auto;  
+    max-width: 100px;   
+    height: auto;        
 }
 
 .star-rating {
-    color: gold; /* Define a cor das estrelas como dourado */
-    font-size: 16px; /* Define o tamanho da fonte das estrelas */
+    color: gold; 
+    font-size: 16px;
 }
 
 #results .rating {
-    font-size: 10px;  /* Define um tamanho menor para a fonte do rating */
+    font-size: 10px; 
 }
 
 #results h2 {
-    font-size: 15px; /* Define o tamanho da fonte para 14px, ajuste conforme necessário */
-    font-weight: bold; /* Opção para não enfatizar demais o título */
+    font-size: 15px; 
+    font-weight: bold; 
 
 }
