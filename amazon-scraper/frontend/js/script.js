@@ -32,18 +32,32 @@ function getStarRating(rating) {
 
 function displayResults(data) {
     const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = ''; // Limpa resultados antigos
+    resultsContainer.innerHTML = '';
 
     data.forEach(item => {
         const div = document.createElement('div');
         div.className = 'product';
-        const starRating = getStarRating(parseFloat(item.rating)); // Converte a classificação numérica em estrelas
-        div.innerHTML = `
-            <img src="${item.imageUrl}" alt="${item.title}" style="width:100px; height:auto;">
-            <h2>${item.title}</h2>
-            <p class="rating">Rating: <span class="star-rating">${starRating}</span> (${item.numReviews} reviews)</p>
-        `;
+        
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'product-image';
+        
+        const img = document.createElement('img');
+        img.src = item.imageUrl;
+        img.alt = item.title;
+
+        imgContainer.appendChild(img);
+        div.appendChild(imgContainer);
+
+        const title = document.createElement('h2');
+        title.textContent = item.title;
+
+        const rating = document.createElement('p');
+        rating.className = 'rating';
+        const starRating = getStarRating(parseFloat(item.rating));
+        rating.innerHTML = `Rating: <span class="star-rating">${starRating}</span> <span class="num-reviews">(${item.numReviews} reviews)</span>`;
+
+        div.appendChild(title);
+        div.appendChild(rating);
         resultsContainer.appendChild(div);
     });
 }
-

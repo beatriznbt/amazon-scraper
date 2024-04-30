@@ -34,10 +34,13 @@ app.get('/api/scrape', async (req, res) => {
 
     try {
         const products = await fetchAmazonResults(keyword);
+        if (products.length === 0) {
+            throw new Error("No products found");
+        }
         res.json(products);
     } catch (error) {
         console.error('Error fetching data:', error);
-        res.status(500).json({ error: 'Failed to fetch data' });
+        res.status(500).json({ error: error.message || 'Failed to fetch data' });
     }
 });
 
