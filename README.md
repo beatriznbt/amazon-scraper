@@ -1,4 +1,4 @@
-# Amazon Scraper
+# Scraping project for Amazon search
 
 Project using Node.js dependencies (express, axios and JSDOM), HTML, CSS and Vanilla JavaScript to create an endpoint / API / scrape to fetch the contents of the Amazon search results page for a given keyword.
 
